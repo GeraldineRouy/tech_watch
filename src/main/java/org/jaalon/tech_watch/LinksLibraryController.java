@@ -53,8 +53,9 @@ public class LinksLibraryController {
         return linkToUpdate;
     }
 
-    public Map<String, Link> deleteLink (String id) {
-        return null;
+    public void deleteLink (String id) {
+        links.remove(id);
+
     }
 
 
