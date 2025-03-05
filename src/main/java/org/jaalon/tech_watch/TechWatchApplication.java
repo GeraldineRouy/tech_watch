@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TechWatchApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(TechWatchApplication.class, args);
 	}
 
