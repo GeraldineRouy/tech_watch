@@ -35,4 +35,16 @@ public class Link {
     public void setId(String id) {
         this.id = id;
     }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

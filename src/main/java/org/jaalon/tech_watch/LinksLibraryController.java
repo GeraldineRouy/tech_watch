@@ -16,6 +16,10 @@ public class LinksLibraryController {
 //    private LinksLibraryService linksLibraryService;
     private Map<String, Link> links = new HashMap<>();
 
+    public LinksLibraryController() {
+
+    }
+
     public Map<String, Link> getAllLinks () {
         return links;
     }
@@ -33,8 +37,20 @@ public class LinksLibraryController {
         return id;
     }
 
-    public Link updateLink (Link link) {
-        return null;
+    public Link updateLink (Link linkWithUpdatedData) {
+        //récupère id du lien en param
+        String id = linkWithUpdatedData.getId();
+
+        //récupère lien de la persistance
+        Link linkToUpdate = links.get(id);
+
+        //change les données du lien
+        linkToUpdate.setTitle(linkWithUpdatedData.getTitle());
+        linkToUpdate.setUrl(linkWithUpdatedData.getUrl());
+        linkToUpdate.setDescription(linkWithUpdatedData.getDescription());
+
+        //renvoie le lien modifié
+        return linkToUpdate;
     }
 
     public Map<String, Link> deleteLink (String id) {
